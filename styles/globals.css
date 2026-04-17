@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────
+   CSS CUSTOM PROPERTIES (design tokens)
+   These mirror tailwind.config.ts — use CSS vars for non-Tailwind
+   contexts (inline styles, SVG, etc.)
+───────────────────────────────────────────────────────────── */
+:root {
+  /* Colours */
+  --forest:        #0F2A1D;
+  --forest-dark:   #0A1F16;
+  --gold:          #8C7A4F;
+  --gold-muted:    rgba(140, 122, 79, 0.2);
+  --monk-white:    #F0EFEA;
+  --monk-dim:      rgba(228, 228, 220, 0.65);
+  --monk-faint:    rgba(228, 228, 220, 0.45);
+  --monk-border:   rgba(140, 122, 79, 0.2);
+  --monk-error:    #C2705C;
+
+  /* Typography */
+  --font-inter: 'Inter', system-ui, sans-serif;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   BASE
+───────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--forest);
+  color: var(--monk-white);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* No pure black or pure white */
+::selection {
+  background: rgba(140, 122, 79, 0.3);
+  color: var(--monk-white);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SCROLLBAR
+───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--monk-border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ─────────────────────────────────────────────────────────────
+   FOCUS
+───────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TYPOGRAPHY HELPERS
+───────────────────────────────────────────────────────────── */
+.font-monk-white  { color: var(--monk-white); }
+.font-monk-dim    { color: var(--monk-dim); }
+.font-monk-faint  { color: var(--monk-faint); }
+.text-gold-accent { color: var(--gold); }
+
+/* ─────────────────────────────────────────────────────────────
+   UTILITY: hide scrollbar but keep scroll
+───────────────────────────────────────────────────────────── */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* ─────────────────────────────────────────────────────────────
+   MOTION PREFERENCE
+───────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
