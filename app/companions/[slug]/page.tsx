@@ -10,8 +10,13 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const products = await getAllProducts()
-  return products.map(p => ({ slug: p.slug }))
+  const { createClient } = await import('@supabase/supabase-js')
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  )
+  const { data } = await supabase.from('products').select('slug')
+  return (data ?? []).map(p => ({ slug: p.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

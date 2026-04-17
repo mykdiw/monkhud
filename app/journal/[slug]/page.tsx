@@ -10,8 +10,13 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const posts = await getAllJournalPosts()
-  return posts.map(p => ({ slug: p.slug }))
+  const { createClient } = await import('@supabase/supabase-js')
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  )
+  const { data } = await supabase.from('journal_posts').select('slug').eq('is_published', true)
+  return (data ?? []).map(p => ({ slug: p.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
