@@ -48,7 +48,6 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-forest-radial pointer-events-none" />
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage:'linear-gradient(rgba(196,148,60,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(196,148,60,0.04) 1px,transparent 1px)', backgroundSize:'52px 52px' }} />
         <div className="relative z-10 max-w-container mx-auto w-full">
-          <p className="text-micro text-gold mb-8 tracking-widest">MONKHUD · NO. 01</p>
           <h1 className="font-semibold leading-[1.02] tracking-[-0.025em] mb-8 max-w-2xl text-monk-white" style={{fontSize:'clamp(52px,7vw,96px)',lineHeight:'0.92',letterSpacing:'0.02em'}}>
             STRIP THE<br /><span className="text-gold">NOISE.</span><br />KEEP THE EDGE.
           </h1>
@@ -96,8 +95,7 @@ export default async function HomePage() {
       <section className="px-6 md:px-16 lg:px-24 py-section bg-forest border-b border-monk-border">
         <div className="max-w-container mx-auto">
           <div className="mb-16">
-            <p className="text-micro text-gold tracking-widest mb-4">// The Monk&apos;s Code</p>
-            <h2 className="text-h2 font-medium mb-6 text-monk-white">SIX LAWS OF<br />THE FOCUSED DESK</h2>
+              <h2 className="text-h2 font-medium mb-6 text-monk-white">SIX LAWS OF<br />THE FOCUSED DESK</h2>
             <p className="text-body text-monk-dim font-light max-w-prose">The Monk removed what did not belong. What remained followed six laws. Every Companion in the Hud passes them.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-monk-border border border-monk-border">
@@ -118,8 +116,7 @@ export default async function HomePage() {
         <div className="max-w-container mx-auto">
           <div className="flex items-end justify-between mb-16">
             <div>
-              <p className="text-micro text-gold tracking-widest mb-4">// From the Clearing</p>
-              <h2 className="text-h2 font-medium text-monk-white">THE MONK&apos;S<br />COMPANIONS</h2>
+                  <h2 className="text-h2 font-medium text-monk-white">THE MONK&apos;S<br />COMPANIONS</h2>
             </div>
             <Link href="/companions" className="hidden md:block text-micro text-monk-dim tracking-widest hover:text-gold transition-colors">Meet All Companions →</Link>
           </div>
@@ -142,8 +139,7 @@ export default async function HomePage() {
       <section className="px-6 md:px-16 lg:px-24 py-section bg-forest border-b border-monk-border">
         <div className="max-w-container mx-auto">
           <div className="mb-16">
-            <p className="text-micro text-gold tracking-widest mb-4">// The Monk&apos;s Three Paths</p>
-            <h2 className="text-h2 font-medium text-monk-white mb-4">WHICH MONK<br />ARE YOU?</h2>
+              <h2 className="text-h2 font-medium text-monk-white mb-4">WHICH MONK<br />ARE YOU?</h2>
             <p className="text-body text-monk-dim font-light max-w-prose">The Hud takes a different shape for every practice. The path changes. The silence doesn&apos;t.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-monk-border border border-monk-border">
@@ -174,8 +170,7 @@ export default async function HomePage() {
       <section className="px-6 md:px-16 lg:px-24 py-section bg-forest-dark border-t border-b border-monk-border">
         <div className="max-w-container mx-auto">
           <div className="mb-16">
-            <p className="text-micro text-gold tracking-widest mb-4">// Those Who Walk the Paths</p>
-            <h2 className="text-h2 font-medium text-monk-white">THE ORDER<br />OF MONKS</h2>
+              <h2 className="text-h2 font-medium text-monk-white">THE ORDER<br />OF MONKS</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col gap-px">
@@ -210,8 +205,7 @@ export default async function HomePage() {
           <div className="max-w-container mx-auto">
             <div className="flex items-end justify-between mb-16">
               <div>
-                <p className="text-micro text-gold tracking-widest mb-4">// The Journal</p>
-                <h2 className="text-h2 font-medium text-monk-white">Field notes.</h2>
+                  <h2 className="text-h2 font-medium text-monk-white">Field notes.</h2>
               </div>
               <Link href="/journal" className="hidden md:block text-micro text-monk-dim tracking-widest hover:text-gold transition-colors">All field notes →</Link>
             </div>

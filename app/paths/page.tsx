@@ -23,7 +23,6 @@ export default async function PathsPage() {
       {/* Hero */}
       <div className="bg-forest-dark border-b border-monk-border pt-32 pb-16 px-6 md:px-16 lg:px-24">
         <div className="max-w-container mx-auto max-w-2xl">
-          <p className="text-micro text-gold tracking-widest mb-4">// The Paths</p>
           <h1 className="font-semibold leading-tight mb-6"
               style={{ fontSize: 'clamp(44px,5vw,64px)', letterSpacing: '-0.02em', lineHeight: '1.02' }}>
             Three paths.<br />One practice.

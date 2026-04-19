@@ -28,7 +28,6 @@ export default async function JournalPage() {
           }}
         />
         <div className="max-w-container mx-auto relative z-10 max-w-2xl">
-          <p className="text-micro text-gold tracking-widest mb-4">// The Journal</p>
           <h1 className="font-semibold leading-tight mb-6"
               style={{ fontSize: 'clamp(44px,5vw,64px)', letterSpacing: '-0.02em', lineHeight: '1.02' }}>
             Field notes<br />from the Hud.

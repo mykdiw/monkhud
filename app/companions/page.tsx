@@ -29,8 +29,7 @@ export default async function CompanionsPage() {
         <div className="max-w-container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-micro text-gold tracking-widest mb-4">// The Monk&apos;s Companions</p>
-              <h1 className="font-semibold leading-tight tracking-tight mb-4"
+                  <h1 className="font-semibold leading-tight tracking-tight mb-4"
                   style={{ fontSize: 'clamp(48px,6vw,80px)', letterSpacing: '-0.02em', lineHeight: '0.95' }}>
                 EVERY COMPANION<br />
                 <span className="text-gold">EARNED ITS PLACE.</span>

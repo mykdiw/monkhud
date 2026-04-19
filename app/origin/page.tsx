@@ -35,7 +35,6 @@ export default function OriginPage() {
       <div className="bg-forest-dark border-b border-monk-border pt-32 pb-20 px-6 md:px-16 lg:px-24 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage:'linear-gradient(rgba(196,148,60,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(196,148,60,0.04) 1px,transparent 1px)', backgroundSize:'50px 50px', opacity:0.5 }} />
         <div className="max-w-container mx-auto relative z-10">
-          <p className="text-micro text-gold tracking-widest mb-6">The Origin</p>
           <h1 className="font-semibold mb-8 text-monk-white" style={{fontSize:'clamp(52px,7vw,96px)',letterSpacing:'0.02em',lineHeight:'0.92'}}>
             THE MONK<br />EXISTED<br />BEFORE<br /><em className="text-gold not-italic">THE BRAND.</em>
           </h1>
@@ -56,8 +55,7 @@ export default function OriginPage() {
       <div className="px-6 md:px-16 lg:px-24 py-section bg-forest border-b border-monk-border">
         <div className="max-w-container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-micro text-gold tracking-widest mb-4">// The Monk&apos;s Doctrine</p>
-            <h2 className="text-h2 font-medium text-monk-white mb-0">YOUR DESK IS<br />A DECISION<br />YOU MAKE DAILY.</h2>
+              <h2 className="text-h2 font-medium text-monk-white mb-0">YOUR DESK IS<br />A DECISION<br />YOU MAKE DAILY.</h2>
           </div>
           <p className="text-body-lg text-monk-dim font-light leading-relaxed">
             The Monk HUD is not about aesthetics. It&apos;s about architecture. Your environment shapes how you think, how long you focus, how much you create, and how far you go. A chaotic desk is a tax on your output — one you pay every single day. The HUD removes that tax.
@@ -84,13 +82,11 @@ export default function OriginPage() {
       <section className="px-6 md:px-16 lg:px-24 py-section border-b border-monk-border bg-forest">
         <div className="max-w-container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
-            <p className="text-micro text-gold tracking-widest mb-4">// The Origin</p>
-            <h2 className="text-h2 font-medium text-monk-white mb-8">HOW THE HUD<br />WAS BUILT.</h2>
+              <h2 className="text-h2 font-medium text-monk-white mb-8">HOW THE HUD<br />WAS BUILT.</h2>
             <p className="text-body text-monk-dim font-light leading-relaxed mb-8">
               Four years. One doctrine. A relentless stripping away of everything that didn&apos;t earn its place. This is how Monk Hud became what it is.
             </p>
             <div className="border border-monk-border p-8 bg-forest-dark">
-              <p className="text-micro text-gold tracking-widest mb-3">// The Monk&apos;s North Star</p>
               <p className="font-semibold text-monk-white mb-4" style={{fontSize:'28px',letterSpacing:'0.02em',lineHeight:'1.1'}}>
                 &ldquo;DISCIPLINE<br />BUILDS THE<br />ENVIRONMENT.&rdquo;
               </p>
@@ -121,7 +117,6 @@ export default function OriginPage() {
       {/* Values */}
       <section className="px-6 md:px-16 lg:px-24 py-section border-b border-monk-border bg-forest-dark">
         <div className="max-w-container mx-auto">
-          <p className="text-micro text-gold tracking-widest mb-4">// The Monk&apos;s Laws</p>
           <h2 className="text-h2 font-medium text-monk-white mb-16">THE CODE<br />UNDER THE<br />HOOD.</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-monk-border border border-monk-border">
             {VALUES.map(v => (
@@ -138,7 +133,6 @@ export default function OriginPage() {
       {/* Team */}
       <section className="px-6 md:px-16 lg:px-24 py-section border-b border-monk-border bg-forest">
         <div className="max-w-container mx-auto">
-          <p className="text-micro text-gold tracking-widest mb-4">// The Monk</p>
           <div className="border border-monk-border p-12 text-center max-w-xl mx-auto">
             <p className="text-body text-monk-dim font-light leading-relaxed">
               The people behind Monk Hud prefer to let the Companions speak first. Introductions to follow.

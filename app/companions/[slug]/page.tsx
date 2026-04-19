@@ -86,7 +86,6 @@ export default async function CompanionPage({ params }: Props) {
         {product.creature_text && (
           <section className="px-6 md:px-16 lg:px-24 py-section border-b border-monk-border bg-forest-dark">
             <div className="max-w-container mx-auto max-w-prose">
-              <p className="text-micro text-gold tracking-widest mb-6">// The Creature</p>
               <p className="text-body-lg text-monk-dim font-light leading-relaxed">{product.creature_text}</p>
             </div>
           </section>
@@ -95,7 +94,6 @@ export default async function CompanionPage({ params }: Props) {
         {/* ── Section 3: The Specification ─────────────────── */}
         <section className="px-6 md:px-16 lg:px-24 py-section border-b border-monk-border">
           <div className="max-w-container mx-auto">
-            <p className="text-micro text-gold tracking-widest mb-12">// The Specification</p>
             <div className="divide-y divide-monk-border border-t border-b border-monk-border max-w-xl">
               {Object.entries(product.specs).map(([key, value]) => (
                 <div key={key} className="flex justify-between py-4">
@@ -111,7 +109,6 @@ export default async function CompanionPage({ params }: Props) {
         {product.monks_notes && (
           <section className="px-6 md:px-16 lg:px-24 py-section bg-forest-dark border-b border-monk-border">
             <div className="max-w-container mx-auto max-w-prose">
-              <p className="text-micro text-gold tracking-widest mb-8">// The Monk&apos;s Notes</p>
               <blockquote className="border-l-2 border-gold pl-8">
                 <p className="text-body-lg text-monk-dim font-light leading-relaxed italic">
                   {product.monks_notes}
