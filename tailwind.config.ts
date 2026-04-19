@@ -9,28 +9,27 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Monk Hud design tokens
         forest: {
-          DEFAULT: '#0F2A1D',   // primary background
-          dark:    '#0A1F16',   // darker — overlays, footers
+          DEFAULT: '#1E3828',   // Option B — dappled forest light
+          dark:    '#172D1F',   // darker — sections, footers
+          deep:    '#111F16',   // deepest — overlays
         },
         gold: {
-          DEFAULT: '#8C7A4F',   // accent — use sparingly (max 2x per viewport)
-          muted:   'rgba(140, 122, 79, 0.2)', // borders / dividers
+          DEFAULT: '#C4943C',   // saffron — monk's robe in the clearing
+          muted:   'rgba(196,148,60,0.2)',
         },
         monk: {
-          white:   '#F0EFEA',               // text primary
-          dim:     'rgba(228,228,220,0.65)', // text secondary
-          faint:   'rgba(228,228,220,0.45)', // text tertiary
-          border:  'rgba(140,122,79,0.2)',   // borders
-          error:   '#C2705C',               // earth red — stock warnings only
+          white:   '#EDE8DC',               // weathered stone white
+          dim:     'rgba(237,232,220,0.60)',
+          faint:   'rgba(237,232,220,0.40)',
+          border:  'rgba(196,148,60,0.18)',
+          error:   '#B45032',               // terracotta — clay brick
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        // Monk Hud type scale
         'hero':   ['clamp(52px,5vw,64px)', { lineHeight: '1.02', letterSpacing: '-0.025em', fontWeight: '600' }],
         'h2':     ['clamp(36px,4vw,44px)', { lineHeight: '1.1',  letterSpacing: '-0.015em', fontWeight: '500' }],
         'h3':     ['24px',                 { lineHeight: '1.2',  fontWeight: '500' }],
@@ -48,7 +47,7 @@ const config: Config = {
         'prose':     '540px',
       },
       backgroundImage: {
-        'forest-radial': 'radial-gradient(ellipse at 30% 20%, rgba(140,122,79,0.06) 0%, transparent 60%)',
+        'forest-radial': 'radial-gradient(ellipse at 70% 30%, rgba(196,148,60,0.07) 0%, transparent 60%)',
       },
     },
   },

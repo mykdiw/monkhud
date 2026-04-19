@@ -8,16 +8,17 @@
    contexts (inline styles, SVG, etc.)
 ───────────────────────────────────────────────────────────── */
 :root {
-  /* Colours */
-  --forest:        #0F2A1D;
-  --forest-dark:   #0A1F16;
-  --gold:          #8C7A4F;
-  --gold-muted:    rgba(140, 122, 79, 0.2);
-  --monk-white:    #F0EFEA;
-  --monk-dim:      rgba(228, 228, 220, 0.65);
-  --monk-faint:    rgba(228, 228, 220, 0.45);
-  --monk-border:   rgba(140, 122, 79, 0.2);
-  --monk-error:    #C2705C;
+  /* Colours — Option B: Dappled forest light */
+  --forest:        #1E3828;
+  --forest-dark:   #172D1F;
+  --forest-deep:   #111F16;
+  --gold:          #C4943C;
+  --gold-muted:    rgba(196, 148, 60, 0.2);
+  --monk-white:    #EDE8DC;
+  --monk-dim:      rgba(237, 232, 220, 0.60);
+  --monk-faint:    rgba(237, 232, 220, 0.40);
+  --monk-border:   rgba(196, 148, 60, 0.18);
+  --monk-error:    #B45032;
 
   /* Typography */
   --font-inter: 'Inter', system-ui, sans-serif;
