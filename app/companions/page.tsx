@@ -29,15 +29,14 @@ export default async function CompanionsPage() {
         <div className="max-w-container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-micro text-gold tracking-widest mb-4">// The Companions</p>
+              <p className="text-micro text-gold tracking-widest mb-4">// The Monk&apos;s Companions</p>
               <h1 className="font-semibold leading-tight tracking-tight mb-4"
                   style={{ fontSize: 'clamp(48px,6vw,80px)', letterSpacing: '-0.02em', lineHeight: '0.95' }}>
-                Every Companion<br />
-                <span className="text-gold">earned its place.</span>
+                EVERY COMPANION<br />
+                <span className="text-gold">EARNED ITS PLACE.</span>
               </h1>
               <p className="text-body text-monk-dim font-light max-w-md mt-6">
-                Nothing here is accidental. Each Companion passed the Monk&apos;s test —
-                function, form, and purpose. If it is here, it survived.
+                Nothing here is accidental. Every Companion passed the Monk&apos;s test — function, form, and purpose. If it is here, it survived.
               </p>
             </div>
             <div className="hidden md:flex gap-4 justify-end flex-wrap">

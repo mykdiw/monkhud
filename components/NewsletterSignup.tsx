@@ -43,9 +43,9 @@ export function NewsletterSignup() {
     <section className="border-t border-monk-border px-6 md:px-16 lg:px-24 py-section text-center">
       <div className="max-w-lg mx-auto">
         <p className="text-micro text-gold tracking-widest mb-4">// Signals from the Hud</p>
-        <h2 className="text-h2 font-medium mb-4">The Monk sends signals.</h2>
+        <h2 className="text-h2 font-medium text-monk-white mb-4">THE MONK<br />SENDS SIGNALS.</h2>
         <p className="text-body text-monk-dim font-light mb-10">
-          Field notes, new Companions, nothing else.
+          Signals from the Hud. Field notes, new Companions, nothing else.
         </p>
 
         {status === 'success' ? (
@@ -65,7 +65,7 @@ export function NewsletterSignup() {
               disabled={status === 'loading'}
               className="bg-gold text-forest-dark text-micro tracking-widest px-6 py-4 font-medium hover:opacity-90 transition-opacity disabled:opacity-60 whitespace-nowrap"
             >
-              {status === 'loading' ? '…' : 'Receive the signal →'}
+              {status === 'loading' ? '…' : 'Receive the Signal →'}
             </button>
           </form>
         )}
