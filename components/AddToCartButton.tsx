@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useCart } from '@/lib/cart'
 import type { Product } from '@/lib/types'
 
 interface Props {
@@ -9,32 +10,17 @@ interface Props {
 
 export function AddToCartButton({ product }: Props) {
   const [added, setAdded] = useState(false)
+  const { addItem } = useCart()
 
   function handleAdd() {
-    // TODO: Wire to CartContext / Zustand store
-    // For now: localStorage cart matching the pattern from the HTML version
-    try {
-      const raw = localStorage.getItem('monkhud_cart')
-      const cart = raw ? JSON.parse(raw) : []
-      const existing = cart.find((i: { product_id: number }) => i.product_id === product.id)
-      if (existing) {
-        existing.quantity += 1
-      } else {
-        cart.push({
-          product_id: product.id,
-          name: product.name,
-          slug: product.slug,
-          category: product.category,
-          emoji: product.emoji,
-          price_inr: product.price_inr,
-          quantity: 1,
-        })
-      }
-      localStorage.setItem('monkhud_cart', JSON.stringify(cart))
-    } catch {
-      console.error('Cart write failed')
-    }
-
+    addItem({
+      product_id: product.id,
+      name:       product.name,
+      slug:       product.slug,
+      category:   product.category,
+      emoji:      product.emoji,
+      price_inr:  product.price_inr,
+    })
     setAdded(true)
     setTimeout(() => setAdded(false), 2000)
   }

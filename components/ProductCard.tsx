@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { useCart } from '@/lib/cart'
 import type { Product } from '@/lib/types'
 
 interface Props {
@@ -15,7 +16,20 @@ const BADGE_STYLES: Record<string, string> = {
 }
 
 export function ProductCard({ product }: Props) {
+  const { addItem } = useCart()
   const badgeStyle = BADGE_STYLES[product.badge_type ?? ''] ?? BADGE_STYLES['']
+
+  function handleAdd(e: React.MouseEvent) {
+    e.preventDefault()
+    addItem({
+      product_id: product.id,
+      name:       product.name,
+      slug:       product.slug,
+      category:   product.category,
+      emoji:      product.emoji,
+      price_inr:  product.price_inr,
+    })
+  }
 
   return (
     <Link
@@ -67,10 +81,7 @@ export function ProductCard({ product }: Props) {
           <button
             className="w-9 h-9 bg-gold text-forest-dark flex items-center justify-center text-lg font-bold hover:scale-110 transition-transform"
             aria-label={`Add ${product.name} to cart`}
-            onClick={e => {
-              e.preventDefault()
-              // Cart logic wired via CartProvider
-            }}
+            onClick={handleAdd}
           >
             +
           </button>

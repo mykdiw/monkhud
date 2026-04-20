@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { useCart } from '@/lib/cart'
 
 const NAV_LINKS = [
   { href: '/companions', label: 'Companions' },
@@ -14,6 +15,7 @@ const NAV_LINKS = [
 export function Nav() {
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { cart, openCart } = useCart()
 
   return (
     <>
@@ -46,14 +48,21 @@ export function Nav() {
         <div className="flex items-center gap-4">
           {/* Cart icon */}
           <button
-            className="text-monk-dim hover:text-monk-white transition-colors"
-            aria-label="Open cart"
+            onClick={openCart}
+            className="relative text-monk-dim hover:text-monk-white transition-colors"
+            aria-label={`Open cart — ${cart.item_count} items`}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
               <line x1="3" y1="6" x2="21" y2="6"/>
               <path d="M16 10a4 4 0 01-8 0"/>
             </svg>
+            {cart.item_count > 0 && (
+              <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-gold text-forest-dark rounded-full flex items-center justify-center font-medium"
+                    style={{ fontSize: '9px' }}>
+                {cart.item_count > 9 ? '9+' : cart.item_count}
+              </span>
+            )}
           </button>
 
           {/* Enter CTA — desktop */}

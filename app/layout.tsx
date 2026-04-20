@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { CartProvider } from '@/lib/cart'
+import { CartDrawer } from '@/components/CartDrawer'
 import '@/styles/globals.css'
 
 const inter = Inter({
@@ -47,7 +49,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="bg-forest text-monk-white antialiased">
-        {children}
+        <CartProvider>
+          {children}
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   )
