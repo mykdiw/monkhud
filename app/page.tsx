@@ -68,7 +68,7 @@ export default async function HomePage() {
       {/* STATS */}
       <div className="grid grid-cols-2 md:grid-cols-4 border-t border-b border-monk-border bg-forest-dark">
         {[{num:'16',label:'Companions'},{num:'7',label:'Categories'},{num:'2+',label:'Years of Curation'},{num:'4.9★',label:'Avg Curation Score'}].map(s => (
-          <div key={s.label} className="px-8 py-6 border-r border-monk-border last:border-r-0">
+          <div key={s.label} className="px-8 py-6 border-r border-monk-border last:border-r-0 text-center">
             <div className="font-semibold text-gold mb-1" style={{fontSize:'42px',letterSpacing:'-0.02em',lineHeight:'1'}}>{s.num}</div>
             <div className="text-micro text-monk-faint tracking-widest">{s.label}</div>
           </div>
