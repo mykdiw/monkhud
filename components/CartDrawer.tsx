@@ -80,12 +80,13 @@ export function CartDrawer() {
               </svg>
               <p className="text-h3 font-medium text-monk-dim">The clearing is quiet.</p>
               <p className="text-small text-monk-faint">Add a Companion to begin.</p>
-              <button
+              <Link
+                href="/companions"
                 onClick={closeCart}
                 className="text-micro text-gold tracking-widest border border-monk-border px-6 py-3 hover:border-gold transition-colors mt-2"
               >
                 Meet the Companions →
-              </button>
+              </Link>
             </div>
           ) : (
             <ul className="flex flex-col gap-0">
