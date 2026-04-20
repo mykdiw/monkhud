@@ -131,13 +131,72 @@ export default function OriginPage() {
       </section>
 
       {/* Team */}
-      <section className="px-6 md:px-16 lg:px-24 py-section border-b border-monk-border bg-forest">
+      <section className="px-6 md:px-16 lg:px-24 py-section border-b border-monk-border bg-forest-dark">
         <div className="max-w-container mx-auto">
-          <div className="border border-monk-border p-12 text-center max-w-xl mx-auto">
-            <p className="text-body text-monk-dim font-light leading-relaxed">
-              The people behind Monk Hud prefer to let the Companions speak first. Introductions to follow.
-            </p>
+          <h2 className="text-h2 font-medium text-monk-white mb-16">
+            Those who<br />unlocked the gate.
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-monk-border border border-monk-border">
+
+            {/* Visual */}
+            <div className="bg-forest flex flex-col items-center justify-center py-16 px-8 relative overflow-hidden">
+              <div className="absolute inset-0 pointer-events-none" style={{background:'radial-gradient(ellipse at 50% 30%, rgba(196,148,60,0.06) 0%, transparent 65%)'}} />
+
+              {/* Avatar halo */}
+              <div className="relative flex items-center justify-center mb-8" style={{width:'120px',height:'120px'}}>
+                <div className="absolute inset-0 rounded-full" style={{border:'0.5px solid rgba(196,148,60,0.2)'}} />
+                <div className="absolute rounded-full" style={{inset:'10px',border:'0.5px solid rgba(196,148,60,0.12)'}} />
+                <div className="absolute rounded-full" style={{inset:'22px',border:'0.5px solid rgba(196,148,60,0.07)'}} />
+                <div className="flex items-center justify-center rounded-full z-10" style={{width:'68px',height:'68px',background:'#172D1F',border:'0.5px solid rgba(196,148,60,0.25)'}}>
+                  <span className="text-gold font-medium tracking-widest" style={{fontSize:'16px',letterSpacing:'0.1em'}}>MD</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-px w-5 bg-gold opacity-60" />
+                <p className="text-micro text-gold tracking-widest" style={{fontSize:'9px'}}>ORACLE · FOUNDER</p>
+                <div className="h-px w-5 bg-gold opacity-60" />
+              </div>
+              <h3 className="text-h3 font-medium text-monk-white text-center mb-1">Mayank Dwivedi</h3>
+              <p className="text-small text-monk-dim italic text-center">The one who unlocked the gate</p>
+            </div>
+
+            {/* Text */}
+            <div className="bg-forest p-10 flex flex-col justify-between">
+              <div>
+                <p className="text-body-lg text-gold font-light italic leading-relaxed mb-6">
+                  An inventor since before he knew the word. The kind of person who looks at an object and immediately sees what it could be instead.
+                </p>
+                <p className="text-body text-monk-dim font-light leading-relaxed mb-4">
+                  He spent years building things for himself — quietly, without announcement. Tools that didn't exist. Setups that solved problems nobody had named yet. Each one made with a single question: what would make this work the way it should?
+                </p>
+                <p className="text-body text-monk-dim font-light leading-relaxed mb-8">
+                  Monk Hud is the answer to that question at scale. Not a product catalogue. A philosophy of function — built by someone who has always believed that the right object in the right place changes how a person thinks.
+                </p>
+                <div className="border-l border-monk-border pl-6">
+                  <p className="text-body text-gold font-light italic leading-relaxed">
+                    &ldquo;I did not build this for the ones who are already certain. I built it for the ones who are almost there.&rdquo;
+                  </p>
+                  <p className="text-micro text-monk-faint tracking-widest mt-3">— MAYANK DWIVEDI</p>
+                </div>
+              </div>
+
+              <div className="flex gap-8 pt-8 mt-8 border-t border-monk-border">
+                {[{n:'∞',l:'DIY builds'},{n:'01',l:'Vision'},{n:'0',l:'Wasted objects'}].map(s => (
+                  <div key={s.l}>
+                    <p className="font-medium text-monk-white mb-1" style={{fontSize:'28px',lineHeight:'1',letterSpacing:'-0.02em'}}>{s.n}</p>
+                    <p className="text-micro text-monk-faint tracking-widest">{s.l}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
+
+          <p className="text-center text-small text-monk-faint italic mt-10">
+            More Companions will be introduced when the time is right.
+          </p>
         </div>
       </section>
 
