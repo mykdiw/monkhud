@@ -181,15 +181,6 @@ export default function OriginPage() {
                   <p className="text-micro text-monk-faint tracking-widest mt-3">— MAYANK DWIVEDI</p>
                 </div>
               </div>
-
-              <div className="flex gap-8 pt-8 mt-8 border-t border-monk-border">
-                {[{n:'∞',l:'DIY builds'},{n:'01',l:'Vision'},{n:'0',l:'Wasted objects'}].map(s => (
-                  <div key={s.l}>
-                    <p className="font-medium text-monk-white mb-1" style={{fontSize:'28px',lineHeight:'1',letterSpacing:'-0.02em'}}>{s.n}</p>
-                    <p className="text-micro text-monk-faint tracking-widest">{s.l}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
           </div>
