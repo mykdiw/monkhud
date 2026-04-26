@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { CartProvider } from '@/lib/cart'
 import { CartDrawer } from '@/components/CartDrawer'
+import { CookieBanner } from '@/components/CookieBanner'
 import '@/styles/globals.css'
 
 const inter = Inter({
@@ -52,6 +53,7 @@ export default function RootLayout({
         <CartProvider>
           {children}
           <CartDrawer />
+          <CookieBanner />
         </CartProvider>
       </body>
     </html>
