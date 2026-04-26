@@ -212,8 +212,9 @@ export default function AccountSettingsPage() {
     <button
       onClick={() => onChange(!checked)}
       className={`w-10 h-5 rounded-full transition-colors relative flex-shrink-0 ${checked ? 'bg-gold' : 'bg-forest border border-monk-border'}`}
+      style={{ minWidth: '40px' }}
     >
-      <span className={`absolute top-0.5 w-4 h-4 rounded-full transition-transform ${checked ? 'bg-forest-dark translate-x-5' : 'bg-monk-faint translate-x-0.5'}`} />
+      <span className={`absolute top-0.5 w-4 h-4 rounded-full transition-transform duration-200 ${checked ? 'bg-forest-dark left-5' : 'bg-monk-faint left-0.5'}`} />
     </button>
   )
 
