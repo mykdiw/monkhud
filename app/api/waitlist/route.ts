@@ -15,14 +15,22 @@ export async function POST(request: Request) {
 
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { success: false, message: 'Please enter a valid email address.' },
+        {
+          success: false,
+          message: 'Please enter a valid email address.',
+        },
         { status: 400 }
       )
     }
 
+    const userAgent = request.headers.get('user-agent')
+    const referrer = request.headers.get('referer')
+
     const { error } = await supabase.from('waitlist').insert({
       email,
       source: 'coming_soon',
+      user_agent: userAgent,
+      referrer: referrer,
     })
 
     if (error) {
@@ -33,8 +41,13 @@ export async function POST(request: Request) {
         })
       }
 
+      console.error('Supabase Error:', error)
+
       return NextResponse.json(
-        { success: false, message: 'Something went wrong. Please try again.' },
+        {
+          success: false,
+          message: 'Something went wrong. Please try again.',
+        },
         { status: 500 }
       )
     }
@@ -43,9 +56,14 @@ export async function POST(request: Request) {
       success: true,
       message: 'You are on the waitlist.',
     })
-  } catch {
+  } catch (error) {
+    console.error('API Error:', error)
+
     return NextResponse.json(
-      { success: false, message: 'Invalid request.' },
+      {
+        success: false,
+        message: 'Invalid request.',
+      },
       { status: 400 }
     )
   }
